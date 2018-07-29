@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HslHomepage</title>
+    <title>@ViewData["Title"] - Hsl主页</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,26 +26,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">HslHomepage</a>
+                <a asp-page="/Index" class="navbar-brand">Homepage</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a href="http://117.48.203.204:8000" target="_blank">API 文档</a></li>
+                    <li><a asp-page="/About">关于组件</a></li>
+                    <li><a asp-page="/Contact">设备支持</a></li>
+                    <li><a asp-page="/Contact">打赏作者</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
+    <div>
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2018 - HslHomepage</p>
-        </footer>
+
+        <div class="container">
+            <footer>
+                <p>&copy; 2018 - Richard.Hu</p>
+            </footer>
+        </div>
     </div>
 
     <environment include="Development">
