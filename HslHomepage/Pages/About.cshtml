@@ -26,23 +26,54 @@
     </div>
     <div class="alert alert-info" role="alert" style="font-size:20px;text-align:center">组件的构架基础</div>
     <div class="row">
-        <div class="col-md-8">
-
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">HslCommunication.dll (.Net Framwork)</div>
+                <div class="panel-body">
+                    <ul>
+                        <li>基于传统<strong>.Net Framework</strong>实现</li>
+                        <li>设备采集类</li>
+                        <li>数据，文件通讯类</li>
+                        <li>数据通信服务器类</li>
+                        <li>串口通信类</li>
+                        <li>日志记录类</li>
+                        <li>基础工具类</li>
+                        <li>常用的控件</li>
+                    </ul>
+                    <div class="alert alert-danger" role="alert" style="margin-bottom:0px">仅限windows平台</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading">HslCommunication.dll (.Net Standard)</div>
+                <div class="panel-body">
+                    <ul>
+                        <li>基于新的<strong>.Net Standard实现</strong></li>
+                        <li>设备采集类</li>
+                        <li>数据，文件通讯类</li>
+                        <li>数据通信服务器类</li>
+                        <li>日志记录类</li>
+                        <li>基础工具类</li>
+                    </ul>
+                    <div class="alert alert-danger" role="alert" style="margin-bottom:0px">跨平台，windows + linux + mac os</div>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">HslCommunication.jar</div>
                 <div class="panel-body">
-                    基于java语言的实现
+                    <ul>
+                        <li>基于<strong> JDK 8</strong> 实现</li>
+                        <li>设备采集类</li>
+                        <li>数据通讯类</li>
+                        <li>基础工具类</li>
+                        <li>支持和C#的服务器交互</li>
+                    </ul>
+                    <div class="alert alert-danger" role="alert" style="margin-bottom:0px">跨平台，windows + android</div>
                 </div>
             </div>
         </div>
     </div>
-
-    <h2>@ViewData["Title"]</h2>
-    <h3>@Model.Message</h3>
-
-    <p>Use this area to provide additional information.</p>
-    本组件目前提供了C#和java版本，其中C#版本又划分为.net framework和.net standard跨平台版，传统的.net版本还提供了几个常用的控件。
-
 </div>

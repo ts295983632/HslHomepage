@@ -1,0 +1,29 @@
+﻿@page
+@model HslHomepage.Pages.SupportModel
+@{
+    ViewData["Title"] = "Support";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top:20px">
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert"
+                aria-hidden="true">
+            &times;
+        </button>
+        下图为作者的支付宝及微信付款码，金额自定义，如果组件真的帮助到了你，感谢你的支持，金额请控制在自己的能力范围内，学生请不要超过5元。如果不小心汇错了钱，请联系作者予以退款。
+    </div>
+    <div class="row">
+        <div class="col-md-6" style="text-align:center">
+            <div class="thumbnail">
+                <img src="~/images/barcode/1532957195426.jpg" />
+            </div>
+        </div>
+        <div class="col-md-6" style="text-align:center">
+            <div class="thumbnail">
+                <img src="~/images/barcode/mm_facetoface_collect_qrcode_1532957239487.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
