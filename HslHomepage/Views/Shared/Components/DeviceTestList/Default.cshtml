@@ -1,0 +1,39 @@
+﻿@using HslHomepage.Data
+
+@model DeviceTest
+@{ 
+    int index = 1;
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><span class="label label-primary" title="当前使用的协议"> @Model.Protocol </span> &nbsp;
+        @foreach(var classItem in Model.Classes)
+        {
+            <span class="label label-success" title="组件中使用的类，大多数情况需要配置正确才能通信。">@classItem</span>
+        }
+    </div>
+    <div class="panel-body" style="padding-bottom:0px">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>规则型号</th>
+                    <th>测试人</th>
+                    <th>测试日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var classItem in Model.TestItems)
+                {
+                    <tr>
+                        <td>@index</td>
+                        <td>@classItem.Model</td>
+                        <td>@classItem.Name</td>
+                        <td>@classItem.DateTime.ToString( "yyyy-MM-dd" )</td>
+                    </tr>
+                    index++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

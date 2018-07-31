@@ -1,0 +1,44 @@
+﻿#tooltip {
+    position: absolute;
+    border: 1px solid #ccc;
+    background: #333;
+    padding: 2px;
+    display: none;
+    color: #fff;
+}
+
+.media_line {
+    display: block;
+    position: relative;
+    top: 11px;
+    content: '';
+    height: 1px;
+    width: 1170px;
+    margin: 0 auto;
+    background: #dbdedf;
+}
+
+.media_title {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: #fff;
+}
+
+    .media_title .diamond {
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        margin: 0 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        width: 8px;
+        height: 8px;
+        background: #000;
+    }

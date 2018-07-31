@@ -4,17 +4,6 @@
     ViewData["Title"] = "Home page";
 }
 
-<style type="text/css">
-    #tooltip {
-        position: absolute;
-        border: 1px solid #ccc;
-        background: #333;
-        padding: 2px;
-        display: none;
-        color: #fff;
-    }
-</style>
-
 
 <div>
     <div class="jumbotron" style="background-color:lightcyan">
@@ -113,6 +102,7 @@ omronFinsNet.ConnectClose( );
     </div>
 </div>
 
+@await Component.InvokeAsync( "Division", new { description = "测试Demo示例" } )
 
 <div class="container">
     <div class="row">
@@ -120,38 +110,45 @@ omronFinsNet.ConnectClose( );
             <div class="thumbnail">
                 <img src="~/images/demo/demo.png" alt="Demo">
                 <div class="caption" style="text-align:center">
-                    <h4><a>Demo开源项目</a></h4>
+                    <h4><a>Demo 测试项目</a></h4>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="thumbnail">
                 <img src="~/images/demo/server.png" alt="server">
-                <div class="caption">
-                    <h3>Demo开源项目</h3>
-                    <p>基于本项目可以方便的测试本组件携带的核心功能，PLC通讯，网络通讯，等等。</p>
-                    <p><a href="#" class="btn btn-primary" role="button">下载</a></p>
+                <div class="caption" style="text-align:center">
+                    <h4><a>Modbus Server 项目</a></h4>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-
+            <div class="thumbnail">
+                <img src="~/images/demo/remote.png" alt="remote">
+                <div class="caption" style="text-align:center">
+                    <h4><a href="https://github.com/dathlin/RemoteMonitor">server + client + web + android</a></h4>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
+<br />
+@await Component.InvokeAsync( "Division", new { description = "友情链接" } )
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <h2>Application uses</h2>
+        <div class="col-md-4">
+            <span style="font-size:28px">IDE Environment</span>
             <ul>
-                <li>Sample pages using ASP.NET Core Razor Pages</li>
-                <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+                <li><a href="https://visualstudio.microsoft.com/zh-hans/">源代码及上述的Demo代码使用了 Visual Studio 2017 开发</a></li>
+                <li><a href="http://www.jetbrains.com/idea/">Java部分的代码使用了 IntelliJ IDEA 开发</a></li>
+                <li><a href="https://code.visualstudio.com/">当然，您也可以通过跨平台的 Visual Studio Code 开发</a></li>
+                <li><a href="http://www.android-studio.org/">安卓部分的代码通过 android studio 开发</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
-            <h2>How to</h2>
+        <div class="col-md-4">
+            <span style="font-size:28px">123</span>
             <ul>
                 <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
                 <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
@@ -160,8 +157,8 @@ omronFinsNet.ConnectClose( );
                 <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
-            <h2>Overview</h2>
+        <div class="col-md-4">
+            <span style="font-size:28px">Application uses</span>
             <ul>
                 <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
                 <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
@@ -172,42 +169,10 @@ omronFinsNet.ConnectClose( );
                 <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
             </ul>
         </div>
-        <div class="col-md-3">
-            <h2>Run &amp; Deploy</h2>
-            <ul>
-                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
-            </ul>
-        </div>
     </div>
 </div>
 
 
+
 @section Scripts{
-    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script>
-        $(function () {
-            var x = 10;
-            var y = 20;
-            $("img").mouseover(function (e) {
-                var tooltip = "<div id='tooltip'><img src='" + this.src + "' alt='产品预览图'/><\/div>"; //创建 div 元素
-                $("body").append(tooltip);	//把它追加到文档中
-                $("#tooltip")
-                    .css({
-                        "top": (e.pageY + y) + "px",
-                        "left": (e.pageX + x) + "px"
-                    }).show("fast");	  //设置x坐标和y坐标，并且显示
-            }).mouseout(function () {
-                $("#tooltip").remove();	 //移除
-            }).mousemove(function (e) {
-                $("#tooltip")
-                    .css({
-                        "top": (e.pageY + y) + "px",
-                        "left": (e.pageX + x) + "px"
-                    });
-            });
-        })
-//]]>
-    </script>
 }

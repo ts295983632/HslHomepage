@@ -1,0 +1,11 @@
+﻿@page
+@model HslHomepage.Pages.CasesModel
+@{
+    ViewData["Title"] = "Cases";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top:20px">
+    @await Component.InvokeAsync( "Division", new { description = "等待上架" } )
+</div>
+
