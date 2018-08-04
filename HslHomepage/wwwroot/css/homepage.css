@@ -13,9 +13,27 @@
     top: 11px;
     content: '';
     height: 1px;
-    width: 1170px;
+    width: 200px;
     margin: 0 auto;
     background: #dbdedf;
+}
+
+@media (min-width: 768px) {
+    .media_line {
+        width: 768px;
+    }
+}
+
+@media (min-width: 992px) {
+    .media_line {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .media_line {
+        width: 1170px;
+    }
 }
 
 .media_title {
