@@ -7,15 +7,20 @@
   <ItemGroup>
     <PackageReference Include="HslCommunication" Version="5.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\images\barcode\" />
     <Folder Include="wwwroot\images\demo\" />
+    <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Shared\Components\CanvasLearn\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Shared\Components\DeviceTestList\Default.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

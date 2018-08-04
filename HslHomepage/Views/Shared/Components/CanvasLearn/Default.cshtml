@@ -1,0 +1,48 @@
+﻿@model string
+@{ 
+    string id = Guid.NewGuid( ).ToString( "N" );
+    string div = Guid.NewGuid( ).ToString( "N" );
+}
+
+<div id="@div">
+    <canvas id="@id" width="300" height="200" style="border:1px solid #000000;"></canvas>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(window).resize(function () {
+        $("#@id").attr("width", $("#@div").width());
+        var canvas = document.getElementById('@id');
+        var canvasWidth = canvas.clientWidth;
+        var canvasHeight = canvas.clientHeight;
+
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "rgb(200,0,0)";
+        //绘制矩形
+        ctx.fillRect(10, 10, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect(30, 30, 55, 50);
+
+        ctx.fillText('@Model', 20, 150);
+        ctx.fillText(canvasWidth, 20, 100);
+        ctx.fillText(canvasHeight, 20, 120);
+    })
+
+    $("#@id").attr("width", $("#@div").width());
+    var canvas = document.getElementById('@id');
+    var canvasWidth = canvas.clientWidth;
+    var canvasHeight = canvas.clientHeight;
+
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(200,0,0)";
+    //绘制矩形
+    ctx.fillRect(10, 10, 55, 50);
+
+    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+    ctx.fillRect(30, 30, 55, 50);
+
+    ctx.fillText('@Model', 20, 150);
+    ctx.fillText(canvasWidth, 20, 100);
+    ctx.fillText(canvasHeight, 20, 120);
+</script>
