@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\barcode\" />
-    <Folder Include="wwwroot\images\demo\" />
     <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 

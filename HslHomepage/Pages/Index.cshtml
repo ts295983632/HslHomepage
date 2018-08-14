@@ -133,6 +133,37 @@ omronFinsNet.ConnectClose( );
     </div>
 </div>
 
+<br />
+@await Component.InvokeAsync( "Division", new { description = "SharpNodeSettings" } )
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">这是一个基于<strong>HslCommunication</strong>组件创建的SDK包，源代码地址：<a href="https://github.com/dathlin/SharpNodeSettings">https://github.com/dathlin/SharpNodeSettings</a>，主要功能实现可配置的，可视化的设备连接信息，设备数据解析规则操作。包含以下三种示例模式</div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="~/images/SampleServer.png" alt="SampleServer">
+                <div class="caption" style="text-align:center">
+                    <h4><a href="https://github.com/dathlin/SharpNodeSettings#sampleserver" target="_blank">SampleServer 项目</a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="~/images/RedisServer.png" alt="RedisServer">
+                <div class="caption" style="text-align:center">
+                    <h4><a href="https://github.com/dathlin/SharpNodeSettings#redisserver" target="_blank">RedisServer 项目</a></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="~/images/OpcUaServer.png" alt="OpcUaServer">
+                <div class="caption" style="text-align:center">
+                    <h4><a href="https://github.com/dathlin/SharpNodeSettings#opcuaserver" target="_blank">OpcUaServer 项目</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <br />
 @await Component.InvokeAsync( "Division", new { description = "友情链接" } )
@@ -175,7 +206,7 @@ omronFinsNet.ConnectClose( );
 
 
 <br />
-@await Component.InvokeAsync( "Division", new { description = "设备配置教程" } )
+@await Component.InvokeAsync( "Division", new { description = "示例教程" } )
 
 @section Scripts{
 }

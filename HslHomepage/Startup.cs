@@ -49,6 +49,7 @@ namespace HslHomepage
                 app.UseExceptionHandler("/Error");
             }
 
+            // 暂时先屏蔽绝对位置的访问
             app.UseStaticFiles( );
             app.UseCookiePolicy();
 
