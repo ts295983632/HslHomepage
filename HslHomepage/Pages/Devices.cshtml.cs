@@ -21,6 +21,10 @@ namespace HslHomepage.Pages
         /// </summary>
         public DeviceTest deviceMelsec1E { get; set; }
         /// <summary>
+        /// 三菱Fx串口协议
+        /// </summary>
+        public DeviceTest deviceMelsecFx { get; set; }
+        /// <summary>
         /// 西门子s7
         /// </summary>
         public DeviceTest deviceSiemensS7 { get; set; }
@@ -52,15 +56,33 @@ namespace HslHomepage.Pages
                 {
                     new DeviceTestItem( )
                     {
+                        Model = "QJ71E71-100",
+                        Name = "杭州-Richard.Hu",
+                        DateTime = new DateTime(2018,1,1),
+                    },
+                    new DeviceTestItem( )
+                    {
                         Model = "Q02 PLC",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                     new DeviceTestItem( )
                     {
                         Model = "L02 PLC",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "Q06UDV PLC",
+                        Name = "泉州-hwdq0012",
+                        DateTime = new DateTime(2018,8,24),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "Fx5u PLC",
+                        Name = "山楂",
+                        DateTime = new DateTime(2018,8,24),
                     }
                 }
             };
@@ -75,6 +97,20 @@ namespace HslHomepage.Pages
                         Model = "Fx 3U",
                         Name = "Unknown",
                         DateTime = new DateTime(2018,07,30),
+                    }
+                }
+            };
+            deviceMelsecFx = new DeviceTest( )
+            {
+                Protocol = "Fx串口协议",
+                Classes = new List<string>( ) { "MelsecFxSerial" },
+                TestItems = new List<DeviceTestItem>( )
+                {
+                    new DeviceTestItem( )
+                    {
+                        Model = "Fx 3U",
+                        Name = "江阴-  ∮溪风-⊙_⌒",
+                        DateTime = new DateTime(2018, 08,24),
                     }
                 }
             };
