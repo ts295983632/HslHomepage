@@ -12,6 +12,7 @@ namespace HslHomepage.Pages
         public void OnGet()
         {
             HslHomepage.Data.StaticInfomation.AccessCount++;
+            Utils.SoftUtils.NumericalOrder.GetLongOrder( );
         }
     }
 }

@@ -123,7 +123,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "1215C",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                 }
@@ -137,7 +137,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "s7-314",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                 }
@@ -151,7 +151,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "example",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                 }
@@ -165,7 +165,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "Siemens 1215C",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                 }
@@ -179,7 +179,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "伺服驱动器",
-                        Name = "Richard.Hu",
+                        Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
                 }

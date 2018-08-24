@@ -14,6 +14,7 @@ namespace HslHomepage
     {
         public static void Main(string[] args)
         {
+            Utils.SoftUtils.NumericalOrder = new HslCommunication.BasicFramework.SoftNumericalOrder( "", "", 10, "123.txt" );
             CreateWebHostBuilder(args).Build().Run();
         }
 
