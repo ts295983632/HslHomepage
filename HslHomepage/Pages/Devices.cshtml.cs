@@ -62,9 +62,15 @@ namespace HslHomepage.Pages
                     },
                     new DeviceTestItem( )
                     {
-                        Model = "Q02 PLC",
-                        Name = "杭州-Richard.Hu",
-                        DateTime = new DateTime(2018,07,30),
+                        Model = "Q00J CPU",
+                        Name = "南京-Zoe",
+                        DateTime = new DateTime(2018,08,25),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "Q02U CPU",
+                        Name = "南京-Zoe",
+                        DateTime = new DateTime(2018,08,25),
                     },
                     new DeviceTestItem( )
                     {
@@ -109,7 +115,7 @@ namespace HslHomepage.Pages
                     new DeviceTestItem( )
                     {
                         Model = "Fx 3U",
-                        Name = "江阴-  ∮溪风-⊙_⌒",
+                        Name = "江阴-∮溪风-⊙_⌒",
                         DateTime = new DateTime(2018, 08,24),
                     }
                 }
@@ -126,6 +132,31 @@ namespace HslHomepage.Pages
                         Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
+                    new DeviceTestItem( )
+                    {
+                        Model = "1214C",
+                        Name = "南京-Zoe",
+                        DateTime = new DateTime(2018,08,25),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "1200",
+                        Name = "南京-Zoe",
+                        DateTime = new DateTime(2018,08,25),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "1500",
+                        Name = "江阴-∮溪风-⊙_⌒",
+                        DateTime = new DateTime(2018,08,25),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "CPU315",
+                        Name = "南京-Zoe",
+                        DateTime = new DateTime(2018,08,25),
+                    },
+
                 }
             };
             deviceSiemensFW = new DeviceTest( )
