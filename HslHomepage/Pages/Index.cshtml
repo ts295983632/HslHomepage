@@ -209,7 +209,59 @@ omronFinsNet.ConnectClose( );
 <br />
 @await Component.InvokeAsync( "Division", new { description = "示例教程，等待上架" } )
 
+<br />
+@await Component.InvokeAsync( "Division", new { description = "日访问量统计" } )
 
+<script src="~/js/echarts.common.min.js"></script>
+<script src="~/js/jquery-1.12.4.min.js"></script>
+<div id="main" class="container">
+    <div id="main2" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        $(window).ready(function () {
+            $("#main2").css( "width", $("#main").width() + 'px');
+
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main2'));
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '网站日访问量统计'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['次数']
+                },
+                xAxis: {
+                    data: ['@Model.x_text[0]', '@Model.x_text[1]', '@Model.x_text[2]', '@Model.x_text[3]', '@Model.x_text[4]', '@Model.x_text[5]', '@Model.x_text[6]',
+                        '@Model.x_text[7]', '@Model.x_text[8]', '@Model.x_text[9]', '@Model.x_text[10]', '@Model.x_text[11]', '@Model.x_text[12]', '@Model.x_text[13]',
+                        '@Model.x_text[14]', '@Model.x_text[15]', '@Model.x_text[16]', '@Model.x_text[17]', '@Model.x_text[18]', '@Model.x_text[19]', '@Model.x_text[20]',
+                        '@Model.x_text[21]', '@Model.x_text[22]', '@Model.x_text[23]', '@Model.x_text[24]', '@Model.x_text[25]', '@Model.x_text[26]', '@Model.x_text[27]',
+                        '@Model.x_text[28]','@Model.x_text[29]'
+                    ]
+                },
+                yAxis: {},
+                series: [{
+                    name: '次数',
+                    type: 'bar',
+                    data: [@Model.y_count[0],@Model.y_count[1],@Model.y_count[2],@Model.y_count[3],@Model.y_count[4],@Model.y_count[5],@Model.y_count[6],@Model.y_count[7],
+                    @Model.y_count[8],@Model.y_count[9],@Model.y_count[10],@Model.y_count[11],@Model.y_count[12],@Model.y_count[13],@Model.y_count[14],@Model.y_count[15],
+                    @Model.y_count[16],@Model.y_count[17],@Model.y_count[18],@Model.y_count[19],@Model.y_count[20],@Model.y_count[21],@Model.y_count[22],@Model.y_count[23],
+                    @Model.y_count[24],@Model.y_count[25],@Model.y_count[26],@Model.y_count[27],@Model.y_count[28],@Model.y_count[29]]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+
+            $(window).resize(function () {
+                $("#main2").css("width", $("#main").width() + 'px');
+                myChart.resize();
+            });
+        })
+
+    </script>
+</div>
 
 @section Scripts{
+
 }
