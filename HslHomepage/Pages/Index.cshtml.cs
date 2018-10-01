@@ -9,8 +9,6 @@ namespace HslHomepage.Pages
 {
     public class IndexModel : PageModel
     {
-        public string X = "";
-        public string Y = "";
         public List<string> x_text = new List<string>( );
         public List<int> y_count = new List<int>( );
 
@@ -38,22 +36,7 @@ namespace HslHomepage.Pages
                         y_count.Add( BitConverter.ToUInt16( Data.StaticInfomation.Tmp, (startIndex + j - 29) * 2 ) );
                     }
                 }
-
-                for (int j = 0; j < 30; j++)
-                {
-                    if(j == 29)
-                    {
-                        X += "'" + x_text[j] + "'";
-                        Y += y_count[j].ToString( );
-                    }
-                    else
-                    {
-                        X += "'" + x_text[j] + "',";
-                        Y += y_count[j].ToString( ) + ",";
-                    }
-                }
-
-
+                
                 System.IO.File.WriteAllBytes( "Tmp.txt", Data.StaticInfomation.Tmp );
             }
 
