@@ -1,0 +1,118 @@
+﻿@page
+@model HslHomepage.Pages.ProjectIndexModel
+@{
+    ViewData["Title"] = "ProjectIndex";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row" style="margin-top:15px">
+        <div class="col-md-8">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#request" data-toggle="tab">
+                        需求发布信息
+                    </a>
+                </li>
+                <li>
+                    <a href="#skill" data-toggle="tab">
+                        产品案例展示
+                    </a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="request">
+                    @if (Model.ProjectItems == null || Model.ProjectItems.Count == 0)
+                    {
+                        <div style="margin-top:10px">
+                            当前没有项目
+                        </div>
+                    }
+                    else
+                    {
+                        foreach (var project in Model.ProjectItems)
+                        {
+                            <div style="margin-top:22px">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <small style="color:gray">发布于 @project.PublishDate.ToString("yyyy-MM-dd")</small>
+                                        <small style="color:gray;margin-left:30px">预算: @project.GetBudgets()</small>
+                                    </div>
+                                    <div class="col-md-2">
+                                        @if (project.Status == 1)
+                                        {
+                                            <span class="label label-warning pull-right">等待揭榜</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="label label-success pull-right">已揭榜</span>
+                                        }
+                                    </div>
+                                </div>
+                                <div style="margin-top:5px">
+                                    <span class="glyphicon glyphicon-tag" aria-hidden="true"></span><a class="text-info" style="font-size:large;color:#0366DA;margin-left:10px">@project.Name</a>
+                                </div>
+
+                                <div style="margin-top:10px">
+                                    @project.Details
+                                </div>
+
+                                @if (project.Topics?.Count > 0)
+                                {
+                                    <div style="margin-top:10px">
+                                        @foreach (var topic in project.Topics)
+                                        {
+                                            <small class="topic-tag">@topic</small>
+                                        }
+                                    </div>
+                                }
+                                <hr style="margin-top:10px" />
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="tab-pane fade" id="skill" style="padding-top:22px">
+                    <div class="panel panel-success">
+                        <div class="panel-heading"><span class="badge">1</span> <a href="~/Files/巫迪数据采集网关V1.0（测试版）.pdf" target="_blank">工业网关-数控机床，PLC数据采集，推送云服务器</a><span class="label label-success pull-right">已认证</span></div>
+                        <div class="panel-body">
+                            <div>
+                                “设备联网智能网关” 是一款专门针对工业中常见控制系统，如CNC，PLC等设计的工业物联网关，
+                                可支持包括具备网口或pcmia口的全系列Fanuc;三菱CNC M70,C70,M80系列;西门子 810D，828D，8028Dsl,840D,840Dsl;
+                                具备串口或网口的Hass系列，同时可支持西门子PLCsmart200,300,400，1200,1500系列，三菱PLC全系列，欧姆龙PLC 等。
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-md-4"><small style="color:gray">注册于 2019-03-17</small></div>
+                                <div class="col-md-4"><small style="color:gray">城市</small><span class="badge">宁夏</span></div>
+                                <div class="col-md-4"><small style="color:gray">详细手册: </small><a href="~/Files/巫迪数据采集网关V1.0（测试版）.pdf">网关</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item" style="background-color:#FAFBFC;font-weight:bold">免费SDK列表</li>
+                <li class="list-group-item">[PLC通讯] <a style="cursor:pointer;color:#357CE2" href="https://github.com/dathlin/HslCommunication">HslCommunication</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/dathlin/HslCommunication.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Office读写] <a style="cursor:pointer;color:#357CE2" href="https://github.com/tonyqus/npoi">NPOI</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/tonyqus/npoi.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[OPC UA] <a style="cursor:pointer;color:#357CE2" href="https://github.com/dathlin/OpcUaHelper">OpcUaHelper</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/dathlin/OpcUaHelper.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Winform黑色主题] <a style="cursor:pointer;color:#357CE2" href="https://github.com/RobinPerris/DarkUI">DarkUI</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/RobinPerris/DarkUI.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Wpf皮肤]<a style="cursor:pointer;color:#357CE2" href="https://github.com/ratishphilip/wpfspark">WPFSpark</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/ratishphilip/wpfspark.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Wpf皮肤] <a style="cursor:pointer;color:#357CE2" href="https://github.com/firstfloorsoftware/mui">MUI</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/firstfloorsoftware/mui.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Wpf皮肤] <a style="cursor:pointer;color:#357CE2" href="https://github.com/MahApps/MahApps.Metro">MahApps.Metro</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/MahApps/MahApps.Metro.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[Wpf皮肤] <a style="cursor:pointer;color:#357CE2" href="https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit">MaterialDesign</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/MaterialDesignInXAML/MaterialDesignInXamlToolkit.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[条码读写] <a style="cursor:pointer;color:#357CE2" href="https://github.com/micjahn/ZXing.Net">ZXing</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/micjahn/ZXing.Net.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                <li class="list-group-item">[实时图表库] <a style="cursor:pointer;color:#357CE2" href="https://github.com/Live-Charts/Live-Charts">Live-Charts</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/Live-Charts/Live-Charts.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+                @*<li class="list-group-item" style="background-color:#FAFBFC"><a class="text-info" style="cursor:pointer">更多...</a></li>*@
+            </ul>
+
+            <ul class="list-group">
+                <li class="list-group-item" style="background-color:#FAFBFC;font-weight:bold">付费SDK列表</li>
+                <li class="list-group-item">[工业控件库] <a style="cursor:pointer;color:#357CE2" href="https://github.com/dathlin/HslControlsDemo">HslControls</a><img class="pull-right" title="star" src="https://img.shields.io/github/stars/dathlin/HslControlsDemo.svg?style=social&amp;label=Stars" alt="star" width="82" height="20"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+

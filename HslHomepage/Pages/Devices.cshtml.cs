@@ -199,6 +199,24 @@ namespace HslHomepage.Pages
                         Name = "杭州-Richard.Hu",
                         DateTime = new DateTime(2018,07,30),
                     },
+                    new DeviceTestItem( )
+                    {
+                        Model = "施耐德 M580PLC",
+                        Name = "杭州~马小辉",
+                        DateTime = new DateTime(2018,11,30),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "施耐德 LMC600",
+                        Name = "杭州~马小辉",
+                        DateTime = new DateTime(2018,11,30),
+                    },
+                    new DeviceTestItem( )
+                    {
+                        Model = "施耐德 M340PLC",
+                        Name = "杭州~马小辉",
+                        DateTime = new DateTime(2018,11,30),
+                    },
                 }
             };
             deviceModbusRtu = new DeviceTest( )
